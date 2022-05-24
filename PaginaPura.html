@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  
+/*
+Codigo CSS del body
+Le aplicamos una imagen de fondo, que no se repite, ocupa todo el body (formato cover) y tiene un padding.
+
+*/
+
+body{
+ background-image: url(https://playwonderlands.2k.com/assets/bg_retail_d.3577faf3.jpg);
+ background-repeat: no-repeat;
+ background-size:cover;
+ padding-top: 157px;
+}
+
+/*
+Codigo CSS del div principal
+Le aplicamos a la imagen de fondo el formato cover (para ocupar el div)
+*/
+
+div{
+background-size: cover;
+}
+
+/*
+Primer pseudoclase, le aplicamos al child div 1 un formato al texto
+*/
+
+div:nth-of-type(1){
+font-size: 24px;
+}
+
+/*
+ Primer pseudoelemento, le aplicamos a la primera letra de los hb un tamaño de 34 pixeles
+*/
+
+hb::first-letter{
+  size: 34px;
+}
+
+/*
+  Segundo pseudoelemento, le aplicamos a la primera letra de los hc un tamaño de 34 pixeles
+*/
+
+hc::first-letter{
+  size: 34px;
+}
+
+/*
+Codigo CSS de los pb, donde aplicamos color, formato, display y alineacion al texto
+  
+*/
+
+pb{
+  color: rgb(75, 203, 253);
+  font-size: 44px;
+  font-display: flex;
+  display: block;
+  text-align: justify;
+  
+}
+
+/*
+  Codigo CSS de los hb, le aplicamos color, formato, display, alineacion y padding al texto
+*/
+
+hb{
+  font-size: 18px;
+  color: rgb(75, 203, 253);
+  font-display: center;
+  display: block;
+  font-weight: bold;
+  padding-top: 20px;
+  text-align: justify;
+  
+}
+
+/*
+  Codigo CSS de los pc, donde aplicamos color, formato, display y alineacion al texto
+*/
+
+pc{
+  color:rgb(255, 255, 255);
+  font-size: 44px;
+  font-display: flex;
+  display: block;
+  text-align: justify;
+
+}
+
+/*
+  Codigo CSS de los hc, le aplicamos color, formato, display, alineacion y padding al texto
+*/
+
+hc{
+  font-size: 18px;
+  color:rgb(255, 255, 255);
+  font-display: center;
+  display: block;
+  font-weight: bold;
+  padding-top: 20px;
+  text-align: justify;
+
+}
+
+/*
+  Segunda pseudoclase, le aplicamos color y formato a 'a', que es el texto (link) con una url referenciada (link)
+*/
+
+a:link {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*
+  Tercera pseudoclase, le aplicamos color y formato a 'a', que es el texto (link) con una url referenciada (link) despues de visitarla
+*/
+
+a:visited{
+   color: white;
+   font-size: 18px;
+   font-weight: bold;
+   
+}
+
+/*
+Codigo CSS del grid de columnas 'wrapper'
+*/
+
+.wrapper {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              grid-auto-rows: 200px;
+              
+            }
+
+/*
+Codigo CSS del contenido del modal
+*/
+
+.modal-contenido{
+            background-image: url(https://cdn.2kgames.com/2021/10/14/6168aaf95009bbrr-zerker-hero.jpg);
+            position:absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+
+/*
+  Codigo CSS del modal
+*/
+
+.modal{
+           
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            opacity:0;
+            pointer-events:none;
+            transition: all 1s;
+            height: 100%;
+            width: 100%;
+        }
+        
+/*
+  Codigo CSS de miModal
+*/
+
+
+#miModal:target{
+            opacity:1;
+            pointer-events:auto;
+            
+        }
+
+/*
+  Codigo CSS del contenido del segundo modal
+*/        
+
+.modal-contenido2{
+            background-image: url(https://cdn.2kgames.com/2021/10/20/61705aa7be71fstabbomancer-hero.jpg);
+            position:absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+/*
+  Codigo CSS del segundo modal
+*/
+
+.modal2{
+           
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            opacity:0;
+            pointer-events: active;
+            transition: all 1s;
+            height: 100%;
+            width: 100%;
+            pointer-events:none;
+        }
+ 
+/*
+  Codigo CSS de miModal segundo
+*/        
+
+#miModal2:target{
+            opacity:1;
+            pointer-events:auto;
+        }
+/*
+  Codigo CSS de la animacion del texto (link) referenciando al trailer (link), osea de a
+*/
+        #movidas {
+            animation-name: dos;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+            animation-direction:normal;
+        }
+/*
+Codigo CSS de la animacion en concreto 
+*/
+        @keyframes dos {
+            from {
+                margin-left: 100%;
+                width: 100%;
+                
+            }
+            
+            50% {
+                font-size: 300%;
+                
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+                
+            }
+        }
+
+/*
+ Codigo CSS de pl (donde se encuentra el texto (link) con url referenciada (trailer)) 
+*/
+
+pl{
+color: rgb(255, 255, 255);
+
+        }
+
+
+
+</style>
+</head>
+<body>
+
+<div><img src="clases.png" alt="background-image"></div> 
+
+<div id="movidas">
+  <a href=https://www.youtube.com/watch?v=l1QQXZAtMUs target="_blank"><pl>CLASSES TRAILER</pl></a> 
+</div>
+
+<a href="#miModal"><pb>BRR-ZERKER</pb></a>
+
+      <div id="miModal" class="modal">
+
+        <div class="modal-contenido">
+        <div class="wrapper">
+           <a href="#">X</a>
+            <divb>
+              <div>
+                <hb>Brr-Zerkers are tenacious Frost-infused bruisers who complement 
+                  their firepower with an onslaught of brutal, up-close-and-personal melee attacks.
+
+                  When confronted with a problem, a Brr-Zerker's first instinct is to turn it into a popsicle and punch their way to a solution. 
+                  Brr-Zerkers are hardy warriors who hail from the frozen mountains, with a long line of ancestors 
+                  who trained their bodies to withstand and even harness the bitter cold of icy winters. 
+                  In battle, Brr-Zerkers prefer to do their fighting up close and personal, 
+                  taking point on the front lines as a whirling maelstrom of exceptionally chilly death.
+                </hb>
+                <pb>Class Information</pb>
+                <hb>Brr-Zerkers are specialists of Melee and Frost damage. 
+                  The Brr-Zerker's otherworldly powers allow them to become Enraged via their Action Skills, 
+                  channel the power of Frost through weaponry so that they may Freeze and shatter their enemies, 
+                  and manifest an arsenal of raw destructive force. Brr-Zerkers are even able to channel their bloodthirst 
+                  by leeching life from fallen foes using a dash of occult magic.</hb>
+              </div>
+              <div>
+                <pb>Class Feat</pb>
+                <hb>Rage of the Ancients
+
+                  Using an Action Skill causes the Fatemaker to become Enraged, adding bonus Frost Damage to their attacks. 
+                  Enrage Duration will not deplete while an Action Skill is active and ends if the Fatemaker enters Save Your Soul. 
+                  Activating an Action Skill when already Enraged restores a portion of the Enrage timer.
+                </hb>
+              </div>
+              <div>
+                <pb>Action Skills</pb>
+                <hb>Dreadwind: The Fatemaker spins, slashing anything nearby with their melee weapon and essentially becoming a pain tornado. 
+                    Grants increased Movement Speed and Slow Immunity for a duration.           
+                </hb>
+              </div>
+            </divb>
+        </div>  
+      </div>
+</div>
+
+
+<a href="#miModal2"><pb>STABBOMANCER</pb></a>
+
+      <div id="miModal2" class="modal2">
+
+        <div class="modal-contenido2">
+        <div class="wrapper">
+           <a href="#">X</a>
+            <divb>
+              <div>
+                <hc>Stabbomancers are sneaky, Critical-hit-focused assassins who summon magic whirling blades to the battlefield and disappear into the shadows at will.
+
+                  Look, Stabbomancy isn't really its own school of magic—it's a way of thinking. Specifically, "How do I stab that guy?" Up close with a dagger in the dark? A well-aimed bullet from afar? Or even an ethereal psychic ghost sword? The thing is, Stabbomancers are all about creating, and capitalizing on, opportunities. Jacks of all trades, masters of none, the skillful Stabbomancer exploits foes' weaknesses to stealthily strike vital targets to bring enemies down before they know what hit them.
+                </hc>
+                <pc>Class Information</pc>
+                <hc>The Stabbomancer specializes in Critical Hits and Status Effects. They're able to keep enemies guessing by alternating between Guns, Melee Weapons, and Spells, all the while moving in and out of stealth to score guaranteed Critical Hits. Though fragile, the Stabbomancer can use their superior speed to evade damage and fire their guns while sprinting.
+
+                </hc>
+              </div>
+              <div>
+                <pc>Class Feat</pc>
+                <hc>Dirty Fighting:
+
+                  The Fatemaker's Critical Hit Chance is increased.
+                </hc>
+              </div>
+              <div>
+                <pc>Action Skills</pc>
+                <hc>Ghost Blade:
+
+                  The Fatemaker throws out a Ghost Blade which spins in place at target location, dealing Melee Damage periodically to nearby enemies based on the Fatemaker's equipped Melee Weapon.
+                  Pressing the Action Skill Button while Ghost Blade is active causes it to teleport to the targeted location and reduces its remaining duration by a small percentage.         
+                </hc>
+              </div>
+            </divb>
+        </div>  
+      </div>
+</div>
+
+
+</body>
+</html>
